@@ -17,12 +17,9 @@ export const fetchData = async (country) => {          //we call this function i
 
     let changeableUrl = url;
 
-
     if(country){
         changeableUrl = `${url}/countries/${country.toUpperCase()}`;
     }
-
-
 
     try {
         //destructuring
@@ -42,7 +39,6 @@ export const fetchDailyData = async () => {
     try {
         const { data } = await axios.get(`${url}/daily`); //to access the second part of url
         //console.log(data);      //to see this console.log(data) we need to call the function in chart.js
-
 
         //extracting the important data, data is an array therefore we loop overit and return an object
         const modifiedData = data.map((dailyData) => ({
