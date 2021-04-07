@@ -56,7 +56,7 @@ const Charts = ({data: {confirmed, recovered, deaths}, country}) => {
                       datasets: [
                         {
                           label: 'People',
-                          backgroundColor: ['rgba(255, 0, 0, 0.6)','rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 0.6)', ,'rgba(0, 0, 0, 0.6)'],
+                          backgroundColor: ['rgba(255, 0, 0, 0.6)','rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 0.6)','rgba(0, 0, 0, 0.6)'],
                           data: [confirmed.value, (confirmed.value-(recovered.value+deaths.value)), recovered.value, deaths.value],       //data coming from props
                         },
                       ],
